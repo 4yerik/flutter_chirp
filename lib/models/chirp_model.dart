@@ -1,4 +1,4 @@
-import 'package:flutterchrip/models/user_model.dart';
+import 'package:flutterchirp/models/user_model.dart';
 
 class Chirp {
   final User sender;
@@ -30,7 +30,7 @@ final User channingTatum = User(
 
 final User robertPattinson = User(
   id: 2,
-  name: 'Robert Pattinson',
+  name: 'Robert',
   imageURL: 'assets/images/channingTatum.jpg',
 );
 
@@ -41,7 +41,26 @@ final User giannis = User(
 );
 
 
-List<User> favourites = [giannis, robertPattinson];
+final User lebron = User(
+  id: 4,
+  name: 'Lebron',
+  imageURL: 'assets/images/channingTatum.jpg',
+);
+
+final User kevin = User(
+  id: 5,
+  name: 'Kevin',
+  imageURL: 'assets/images/channingTatum.jpg',
+);
+
+final User shaq = User(
+  id: 6,
+  name: 'Shaq',
+  imageURL: 'assets/images/channingTatum.jpg',
+);
+
+
+List<User> best = [giannis, robertPattinson, lebron, kevin, shaq];
 
 List<Chirp> chats = [
   Chirp(
@@ -49,7 +68,7 @@ List<Chirp> chats = [
     time: '5:24 PM',
     message: 'Court at 9?',
     isLoved: false,
-    seen: true,
+    seen: false,
   ),
   Chirp(
     sender: robertPattinson,
@@ -61,6 +80,20 @@ List<Chirp> chats = [
 ];
 
 List<Chirp> chirps = [
+  Chirp(
+    sender: giannis,
+    time: '5:24 PM',
+    message: 'Court at 9?',
+    isLoved: false,
+    seen: false,
+  ),
+  Chirp(
+    sender: robertPattinson,
+    time: '5:28 PM',
+    message: 'Hey',
+    isLoved: true,
+    seen: true,
+  ),
   Chirp(
     sender: giannis,
     time: '5:24 PM',
