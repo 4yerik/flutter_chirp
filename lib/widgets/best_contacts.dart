@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterchirp/models/chirp_model.dart';
+import 'package:flutterchirp/screens/conversation_screen.dart';
 
 class BestContacts extends StatelessWidget {
   @override
@@ -39,25 +40,35 @@ class BestContacts extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: best.length,
               itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Column(
-                    children: <Widget>[
-                      CircleAvatar(
-                        radius: 35.0,
-                        backgroundImage: AssetImage(best[index].imageURL),
+                return GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => ConversationScreen(
+                        user: best[index],
                       ),
-                      SizedBox(
-                        height: 6.0,
-                      ),
-                      Text(
-                        best[index].name,
-                        style: TextStyle(
-                            color: Colors.blueGrey,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ],
+                    ),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                          radius: 35.0,
+                          backgroundImage: AssetImage(best[index].imageURL),
+                        ),
+                        SizedBox(
+                          height: 6.0,
+                        ),
+                        Text(
+                          best[index].name,
+                          style: TextStyle(
+                              color: Colors.blueGrey,
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },

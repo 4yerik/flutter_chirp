@@ -24,8 +24,8 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           'Nest',
           style: TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            fontWeight: FontWeight.w400,
           ),
         ),
         elevation: 0.0,

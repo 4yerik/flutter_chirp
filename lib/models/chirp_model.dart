@@ -31,26 +31,26 @@ final User channingTatum = User(
 final User robertPattinson = User(
   id: 2,
   name: 'Robert',
-  imageURL: 'assets/images/channingTatum.jpg',
+  imageURL: 'assets/images/robert.JPG',
 );
 
 final User giannis = User(
   id: 3,
   name: 'Giannis',
-  imageURL: 'assets/images/channingTatum.jpg',
+  imageURL: 'assets/images/giannis.JPG',
 );
 
 
 final User lebron = User(
   id: 4,
   name: 'Lebron',
-  imageURL: 'assets/images/channingTatum.jpg',
+  imageURL: 'assets/images/lebron.JPG',
 );
 
 final User kevin = User(
   id: 5,
   name: 'Kevin',
-  imageURL: 'assets/images/channingTatum.jpg',
+  imageURL: 'assets/images/kevin.JPG',
 );
 
 final User shaq = User(
@@ -63,6 +63,13 @@ final User shaq = User(
 List<User> best = [giannis, robertPattinson, lebron, kevin, shaq];
 
 List<Chirp> chats = [
+  Chirp(
+    sender: currentUser,
+    time: '5:24 PM',
+    message: 'Hello',
+    isLoved: false,
+    seen: false,
+  ),
   Chirp(
     sender: giannis,
     time: '5:24 PM',
